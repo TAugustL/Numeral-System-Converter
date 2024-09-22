@@ -15,9 +15,9 @@ impl Conversion<'_> {
                 continue;
             }
 
-            let base: u32 = base.parse().expect("invalid base!");
-            let decimal: u32 =
-                u32::from_str_radix(&self.value, self.start_base).expect("invalid number!");
+            let base: u128 = base.parse().expect("invalid base!");
+            let decimal: u128 =
+                u128::from_str_radix(&self.value, self.start_base).expect("invalid number!");
             let mut number: String = String::new();
 
             let remainder = decimal % base;
